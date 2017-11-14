@@ -1126,6 +1126,8 @@ def wood(self, blockid, data):
         return self.build_full_block(side.rotate(90), None, None, top, side.rotate(90))
     elif wood_orientation == 8: # north-south orientation
         return self.build_full_block(side, None, None, side.rotate(270), top)
+    else:
+        return self.build_block(side, side)
 
 @material(blockid=[18, 161], data=range(16), transparent=True, solid=True)
 def leaves(self, blockid, data):
